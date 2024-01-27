@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            perspective: 1000px;
+            height: 400px;
+            width: 320px;
+        }
+
+        .card {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .front-face,
+        .back-face {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: #fff;
+            border-radius: 20px;
+            backface-visibility: hidden;
+        }
+
+        .back-face {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            visibility: hidden;
+        }
+
+        .container:hover .back-face {
+            visibility: visible;
+        }
+
+        /* Your other styles go here */
+    </style>
+    <title>Flipping Card</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="front-face">
+                <!-- Front face content goes here -->
+                <img src="front-face-image.jpg" alt="Front Face">
+            </div>
+            <div class="back-face">
+                <!-- Back face content goes here -->
+                <img src="back-face-image.jpg" alt="Back Face">
+                <div class="info">
+                    <div class="title">Card Title</div>
+                    <p>Additional information</p>
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
