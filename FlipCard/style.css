@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Lato:ital,wght@0,100;0,300;1,300&family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display:grid;
+    height:100vh;
+    width: 100%;
+    place-content:center ;
+    perspective: 1000px;
+
+    background-image: repeating-linear-gradient(333deg, hsla(119,47%,93%,0.05) 0px, hsla(119,47%,93%,0.05) 1px,transparent 1px, transparent 11px,hsla(119,47%,93%,0.05) 11px, hsla(119,47%,93%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(119,47%,93%,0.05) 0px, hsla(119,47%,93%,0.05) 1px,transparent 1px, transparent 11px,hsla(119,47%,93%,0.05) 11px, hsla(119,47%,93%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(119,47%,93%,0.05) 0px, hsla(119,47%,93%,0.05) 1px,transparent 1px, transparent 11px,hsla(119,47%,93%,0.05) 11px, hsla(119,47%,93%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(119,47%,93%,0.05) 0px, hsla(119,47%,93%,0.05) 1px,transparent 1px, transparent 11px,hsla(119,47%,93%,0.05) 11px, hsla(119,47%,93%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(119,47%,93%,0.05) 0px, hsla(119,47%,93%,0.05) 1px,transparent 1px, transparent 11px,hsla(119,47%,93%,0.05) 11px, hsla(119,47%,93%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(130, 26, 221),rgb(63, 178, 202));
+    /* background-image: radial-gradient(circle at 72% 83%, rgba(12, 12, 12,0.04) 0%, rgba(12, 12, 12,0.04) 50%,rgba(172, 172, 172,0.04) 50%, rgba(172, 172, 172,0.04) 100%),radial-gradient(circle at 57% 65%, rgba(11, 11, 11,0.04) 0%, rgba(11, 11, 11,0.04) 50%,rgba(222, 222, 222,0.04) 50%, rgba(222, 222, 222,0.04) 100%),radial-gradient(circle at 64% 31%, rgba(11, 11, 11,0.04) 0%, rgba(11, 11, 11,0.04) 50%,rgba(191, 191, 191,0.04) 50%, rgba(191, 191, 191,0.04) 100%),linear-gradient(130deg, rgb(5, 235, 123),rgb(47, 52, 6)); */
+}
+.container{
+    height:400px;
+    width:320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-in-out;
+}
+.container:hover {
+    transform: rotateY(180deg);
+}
+.container .card{
+    height:100%;
+    width:100%;
+    position: absolute;
+    background: #fff;
+    border-radius:20px;
+    padding:1px;
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+.container .card img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    border-radius:20px;
+}
+.container .back-face{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+}
+.container .back-face img{
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    border:2px solid red;
+    padding:2px;
+}
+.container .back-face .info{
+    text-align:center;
+}
+.back-face .info .title{
+    font-size:30px;
+    font-weight:500;
+    margin-top:-20px;
+    margin-bottom:8px;
+    color:grey;
+
+}
+.info p{
+    color:grey;
+}
+.back-face ul{
+    display:flex;
+}
+.back-face ul li{
+    list-style: none;
+}
+.back-face ul li a{
+    display: block;
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    background:#fff;
+    text-align:center;
+    line-height:38px;
+    margin:0 9px;
+    text-decoration: none;
+    box-shadow:inset -3px -3px 7px #fff,
+    3px 3px 7px #ceced1;
+    transition:all 0.5s ease-in-out;
+}
+.back-face ul li a:hover{
+    box-shadow: inset -3px -3px 7px #fff,
+    inset 3px 3px 7px #ceced1;
+}

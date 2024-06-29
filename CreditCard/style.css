@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Lato:ital,wght@0,100;0,300;1,300&family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#232D3F;
+}
+.creditcard{
+    min-width: 375px;
+    height: 225px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius:15px;
+    box-shadow: 9px 9px 50px #008170;
+    color:white;
+}
+.creditcard .header{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 25px;
+}
+.header span{
+    display: flex;
+    align-items: center;
+}
+.header span h5{
+    margin-left:1rem;
+    font-size:1.1rem;
+}
+.header .logo{
+    width: 65px;
+}
+.header .chip{
+    width: 50px;
+}
+.card-details{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0 25px;
+    margin-top:15px;
+}
+.card-details .name-number h6{
+    font-size:15px;
+    color:gray;
+
+}
+.name-number .number{
+    font-weight:900;
+    font-size:20px;
+}
+.name-number .name{
+    font-size:17px;
+    margin-top:12px;
+    font-weight: 400;
+}
+.valid-date{
+    margin-top:55px;
+    font-size:19px;
+}
